@@ -5,7 +5,7 @@
 In this assignment, you'll be getting the back-end started for a Dungeons & Dragons (D&D or DnD) related program. Whether it is simulating an adventure or helping a player create their character, we need it to be flexible for those front-ends and more!
 
 Below is a UML diagram showing the class inheritance to visualize the classes you will build for this project:
-![UML class diagram showing relationship between GameCharacter, Weapon, Elf, and Dwarf classes](https://i.imgur.com/t8kHbvP.png)
+![UML class diagram showing relationship between GameCharacter, Weapon, Elf, and Dwarf classes](uml.png)
 
 Here are the specifics of each class shown above with the requirements to look out for:
 
@@ -51,5 +51,5 @@ Go crazy with it! Create a new species (Human, Orc, etc.), create a menu to have
 
 # **Additional Resources**
 Here is some content that helped inspire the decisions above. You can use these and other D&D resources to inspire your hacker challenge:
-- [Simple DND Character Explanation](https://simplednd.wordpress.com/creating-characters/character-sheet-explanation/)
+- [DND Character Explanation](https://www.dndbeyond.com/classes)
 - [D&D Starter Set Character Sheets](https://media.wizards.com/downloads/dnd/StarterSet_Charactersv2.pdf)
