@@ -5,8 +5,85 @@
 In this assignment, you'll be getting the back-end started for a Dungeons & Dragons (D&D or DnD) related program. Whether it is simulating an adventure or helping a player create their character, we need it to be flexible for those front-ends and more!
 
 Below is a UML diagram showing the class inheritance to visualize the classes you will build for this project:
-![UML class diagram showing relationship between GameCharacter, Weapon, Elf, and Dwarf classes](uml.png)
 
+```mermaid
+classDiagram
+    class Weapon {
+        - String name
+        - int damage
+        - int range
+        + Weapon()
+        + Weapon(String name, int damage, int range)
+        + Weapon(Weapon otherWeapon)
+        + boolean setName(String name)
+        + boolean setDamage(int damage)
+        + boolean setRange(int range)
+        + boolean setAll(String name, int damage, int range)
+        + String getName()
+        + int getDamage()
+        + int getRange()
+        + String toString()
+        + boolean equals(Weapon other)
+    }
+
+    class GameCharacter {
+        - String name
+        - String characterClass
+        - String alignment
+        - int gold
+        - int expPoints
+        - int hitPoints
+        - int armorClass
+        - Weapon weapon1
+        - Weapon weapon2
+        + GameCharacter()
+        + GameCharacter(String name, String characterClass, ..., Weapon weapon2)
+        + GameCharacter(GameCharacter other)
+        + boolean setName(String name)
+        + boolean setCharacterClass(String characterClass)
+        + boolean setAlignment(String alignment)
+        + boolean setGold(int gold)
+        + boolean setExpPoints(int expPoints)
+        + boolean setHitPoints(int hitPoints)
+        + boolean setArmorClass(int armorClass)
+        + void setWeapon1(Weapon weapon1)
+        + void setWeapon2(Weapon weapon2)
+        + void setAll(String name, String characterClass, ..., Weapon weapon2)
+        + String getName()
+        + String getCharacterClass()
+        + String getAlignment()
+        + int getGold()
+        + int getExpPoints()
+        + int getHitPoints()
+        + int getArmorClass()
+        + Weapon getWeapon1()
+        + Weapon getWeapon2()
+        + String toString()
+        + boolean equals(GameCharacter other)
+        + abstract void assist(GameCharacter other)
+        + abstract boolean attack(GameCharacter other)
+    }
+
+    class Dwarf {
+        + Dwarf()
+        + Dwarf(String name, String characterClass, ..., Weapon weapon2)
+        + Dwarf(Dwarf other)
+        + void assist(GameCharacter other)
+        + boolean attack(GameCharacter other)
+    }
+
+    class Elf {
+        + Elf()
+        + Elf(String name, String characterClass, ..., Weapon weapon2)
+        + Elf(Elf other)
+        + void assist(GameCharacter other)
+        + boolean attack(GameCharacter other)
+    }
+
+    GameCharacter "1" *-- "2" Weapon : has
+    Dwarf --|> GameCharacter : is
+    Elf --|> GameCharacter : is
+```
 Here are the specifics of each class shown above with the requirements to look out for:
 
 **`Weapon`:** This is a concrete class used for composition (has-a relationship) in ***`GameCharacter`***. Here are the specifications:
