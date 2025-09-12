@@ -37,10 +37,10 @@ classDiagram
         - Weapon weapon1
         - Weapon weapon2
         + GameCharacter()
-        + GameCharacter(String name, String characterClass, ..., Weapon weapon2)
+        + GameCharacter(String name, String classType, ..., Weapon weapon2)
         + GameCharacter(GameCharacter other)
         + boolean setName(String name)
-        + boolean setClassType(String characterClass)
+        + boolean setClassType(String classType)
         + boolean setAlignment(String alignment)
         + boolean setGold(int gold)
         + boolean setExpPoints(int expPoints)
@@ -48,7 +48,7 @@ classDiagram
         + boolean setArmorClass(int armorClass)
         + void setWeapon1(Weapon weapon1)
         + void setWeapon2(Weapon weapon2)
-        + void setAll(String name, String characterClass, ..., Weapon weapon2)
+        + void setAll(String name, String classType, ..., Weapon weapon2)
         + String getName()
         + String getClassType()
         + String getAlignment()
@@ -66,7 +66,7 @@ classDiagram
 
     class Dwarf {
         + Dwarf()
-        + Dwarf(String name, String characterClass, ..., Weapon weapon2)
+        + Dwarf(String name, String classType, ..., Weapon weapon2)
         + Dwarf(Dwarf other)
         + void assist(GameCharacter other)
         + boolean attack(GameCharacter other)
@@ -74,7 +74,7 @@ classDiagram
 
     class Elf {
         + Elf()
-        + Elf(String name, String characterClass, ..., Weapon weapon2)
+        + Elf(String name, String classType, ..., Weapon weapon2)
         + Elf(Elf other)
         + void assist(GameCharacter other)
         + boolean attack(GameCharacter other)
