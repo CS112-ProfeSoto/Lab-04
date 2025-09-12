@@ -28,7 +28,7 @@ classDiagram
 
     class GameCharacter {
         - String name
-        - String characterClass
+        - String classType
         - String alignment
         - int gold
         - int expPoints
@@ -40,7 +40,7 @@ classDiagram
         + GameCharacter(String name, String characterClass, ..., Weapon weapon2)
         + GameCharacter(GameCharacter other)
         + boolean setName(String name)
-        + boolean setCharacterClass(String characterClass)
+        + boolean setClassType(String characterClass)
         + boolean setAlignment(String alignment)
         + boolean setGold(int gold)
         + boolean setExpPoints(int expPoints)
@@ -50,7 +50,7 @@ classDiagram
         + void setWeapon2(Weapon weapon2)
         + void setAll(String name, String characterClass, ..., Weapon weapon2)
         + String getName()
-        + String getCharacterClass()
+        + String getClassType()
         + String getAlignment()
         + int getGold()
         + int getExpPoints()
