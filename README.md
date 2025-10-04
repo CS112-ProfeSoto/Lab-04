@@ -12,6 +12,7 @@ classDiagram
         - String name
         - int damage
         - int range
+		- int attackBonus
         + Weapon()
         + Weapon(String name, int damage, int range)
         + Weapon(Weapon otherWeapon)
