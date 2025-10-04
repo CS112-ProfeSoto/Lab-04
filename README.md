@@ -48,7 +48,7 @@ classDiagram
         + boolean setArmorClass(int armorClass)
         + void setWeapon1(Weapon weapon1)
         + void setWeapon2(Weapon weapon2)
-        + void setAll(String name, String classType, ..., Weapon weapon2)
+        + boolean setAll(String name, String classType, ..., Weapon weapon2)
         + String getName()
         + String getClassType()
         + String getAlignment()
